@@ -1,0 +1,57 @@
+{% comment %} Shopify Liquid
+
+Scenario: Several Shopify template snippets need to be updated. Please review and write or update each snippet accordingly.
+
+{% endcomment %}
+
+
+{% comment %} 
+===================================
+COLLECTION LOOP 
+===================================
+Snippet #1: Write a Shopify collection loop that will:
+- list only collections that contain more than 10 products
+- list the collection title
+- link the collection title to the collection url
+{% endcomment %}
+
+{% for collection in collections %}
+{% endfor %}
+
+
+
+{% comment %} 
+===================================
+PRODUCT LOOP 
+===================================
+Snippet #2: Update this product loop so it will:
+- only include products from one particular category (your choice of category)
+- display a product metafield right after the product title (your choice of metafield)
+{% endcomment %}
+
+{% for product in products limit: limit %}
+	{{ product.title }}
+{% endfor %}
+
+
+
+{% comment %} 
+===================================
+PAGE TEMPLATE CODE REVIEW 
+===================================
+Snippet #3: Please review this page template code and:
+- add notes or comments here about what is wrong with this template code
+- fix the code
+{% endcomment %}
+
+<div class="sixteen columns clearfix collection_nav">
+  <h1 class="collection_title">
+    {{ pages.title }}
+  </h1>
+</div>
+</div>
+
+<div class="page" id="page_content">
+    {{ pages.content }}
+    {{ include 'page-snippets' }}
+</div>
